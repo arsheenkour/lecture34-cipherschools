@@ -1,0 +1,23 @@
+STL=STANDARD TEMPLATE LIBRArY
+#include<iostream>
+using namespace std;
+int main()
+{
+	int *arr;
+	arr=new int[5];
+	delete arr;
+	//a vector is an array whose size is not fixed
+	vector<int>a;
+	cout<<"size of vector is:"<<a.size()<<endl;
+	int i;
+	for(i=0;i<5;i++)
+	{
+		a.pushback(i+1);
+	}
+cout<<"size of vector is:"<<a.size()<<endl;
+	for(auto j=a.begin();j<a.end();j++)
+	{
+		cout<<*j;
+	}
+	cout<<"capacity of vector is:"<<a.capacity()<<endl;
+}
